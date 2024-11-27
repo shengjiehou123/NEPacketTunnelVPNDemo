@@ -41,6 +41,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		274997822CF6C682006956CC /* NEPacketTunnelVPNDemoRelease.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = NEPacketTunnelVPNDemoRelease.entitlements; sourceTree = "<group>"; };
+		274997832CF6C690006956CC /* NEPacketTunnelVPNDemoTunnelRelease.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = NEPacketTunnelVPNDemoTunnelRelease.entitlements; sourceTree = "<group>"; };
+		27E2CCE52CF6C99D002514E1 /* NEPacketTunnelVPNDemoDebug.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = NEPacketTunnelVPNDemoDebug.entitlements; sourceTree = "<group>"; };
+		27E2CCE62CF6C9C9002514E1 /* NEPacketTunnelVPNDemoTunnelDebug.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = NEPacketTunnelVPNDemoTunnelDebug.entitlements; sourceTree = "<group>"; };
 		E593CE6B1DF8FC3C00D7265D /* NEPacketTunnelVPNDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NEPacketTunnelVPNDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E593CE6E1DF8FC3C00D7265D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E593CE701DF8FC3C00D7265D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -93,6 +97,8 @@
 		E593CE6D1DF8FC3C00D7265D /* NEPacketTunnelVPNDemo */ = {
 			isa = PBXGroup;
 			children = (
+				27E2CCE52CF6C99D002514E1 /* NEPacketTunnelVPNDemoDebug.entitlements */,
+				274997822CF6C682006956CC /* NEPacketTunnelVPNDemoRelease.entitlements */,
 				E593CE6E1DF8FC3C00D7265D /* AppDelegate.swift */,
 				E593CE701DF8FC3C00D7265D /* ViewController.swift */,
 				E593CE721DF8FC3C00D7265D /* Main.storyboard */,
@@ -106,6 +112,8 @@
 		E593CE981DF905AF00D7265D /* NEPacketTunnelVPNDemoTunnel */ = {
 			isa = PBXGroup;
 			children = (
+				27E2CCE62CF6C9C9002514E1 /* NEPacketTunnelVPNDemoTunnelDebug.entitlements */,
+				274997832CF6C690006956CC /* NEPacketTunnelVPNDemoTunnelRelease.entitlements */,
 				E593CE9B1DF905AF00D7265D /* PacketTunnelProvider.swift */,
 				E593CE9D1DF905AF00D7265D /* Info.plist */,
 				E593CE991DF905AF00D7265D /* Supporting Files */,
@@ -173,12 +181,12 @@
 					E593CE6A1DF8FC3C00D7265D = {
 						CreatedOnToolsVersion = 8.1;
 						DevelopmentTeam = TD725275TZ;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 					};
 					E593CE961DF905AF00D7265D = {
 						CreatedOnToolsVersion = 8.1;
 						DevelopmentTeam = TD725275TZ;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 					};
 				};
 			};
@@ -370,15 +378,19 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = NEPacketTunnelVPNDemo/NEPacketTunnelVPNDemoDebug.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = TD725275TZ;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = TD725275TZ;
 				INFOPLIST_FILE = NEPacketTunnelVPNDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.net.httpproxy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "f730e60f-0a0a-4481-83c1-a3e7be9e9df5";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = netProxyProfileNewDev;
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
@@ -388,15 +400,19 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = NEPacketTunnelVPNDemo/NEPacketTunnelVPNDemoRelease.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = TD725275TZ;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = TD725275TZ;
 				INFOPLIST_FILE = NEPacketTunnelVPNDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.net.httpproxy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "f730e60f-0a0a-4481-83c1-a3e7be9e9df5";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = netProxyProfileNewDev;
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
@@ -404,15 +420,19 @@
 		E593CEA11DF905AF00D7265D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = NEPacketTunnelVPNDemoTunnel/NEPacketTunnelVPNDemoTunnelDebug.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = TD725275TZ;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = TD725275TZ;
 				INFOPLIST_FILE = NEPacketTunnelVPNDemoTunnel/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.net.httpproxy.httpproxy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "8ce353d5-fd5f-4d5e-b664-8ad294091125";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = netProxyProfileDev;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
 			};
@@ -421,15 +441,19 @@
 		E593CEA21DF905AF00D7265D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = NEPacketTunnelVPNDemoTunnel/NEPacketTunnelVPNDemoTunnelRelease.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = TD725275TZ;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = TD725275TZ;
 				INFOPLIST_FILE = NEPacketTunnelVPNDemoTunnel/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.net.httpproxy.httpproxy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "8ce353d5-fd5f-4d5e-b664-8ad294091125";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = netProxyProfileDev;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
 			};

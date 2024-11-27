@@ -14,7 +14,7 @@ class ViewController: UIViewController {
     @IBOutlet var connectButton: UIButton!
 
     // Hard code VPN configurations
-    let tunnelBundleId = "ne.packet.tunnel.vpn.demo.tunnel"
+    let tunnelBundleId = "com.net.httpproxy.httpproxy"
     let serverAddress = "<server-ip>"
     let serverPort = "54345"
     let mtu = "1400"
